@@ -11,5 +11,9 @@ genai.configure(api_key=os.environ["API_KEY"])
 model = genai.GenerativeModel("gemini-1.5-flash")
 
 start = time.time()
-response = model.generate_content("Return test if this is recieved.")
+myfile = genai.upload_file("sampleAudio.mp3")
+print(f"{myfile=}\n______________\nUploaded in {time.time() - start:.2f} seconds")
+
+start = time.time()
+response = model.generate_content([myfile, "Respond to this scam as a grandma would."])
 print(f"{response.text}\n______________\nExecuted in {time.time() - start:.2f} seconds")
