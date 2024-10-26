@@ -62,7 +62,7 @@ def analyze_phone_spam(csv_path):
 # Example usage
 if __name__ == "__main__":
     try:
-        # Replace this with your CSV file path
+        # Replace this ith your CSV file path
         csv_path = "phone_data.csv"
         
         print(f"Analyzing data from: {csv_path}")

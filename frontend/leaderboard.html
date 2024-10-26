@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podium</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .podium-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+        .podium {
+            display: flex;
+            align-items: flex-end;
+            gap: 20px;
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .podium-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            width: 150px;
+        }
+        .podium-label {
+            font-size: 18px;
+            color: #333;
+            font-weight: bold;
+            background: #f0f0f0;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .podium div {
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            padding-top: 15px;
+            border-radius: 5px 5px 0 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            font-size: 22px;
+            width: 100%;
+            transition: height 0.5s;
+        }
+        .second {
+            height: calc(220px * var(--second-place, 0) / 100);
+        }
+        .first {
+            height: calc(280px * var(--first-place, 0) / 100);
+            background-color: #f39c12; /* Gold color for 1st place */
+        }
+        .third {
+            height: calc(180px * var(--third-place, 0) / 100);
+            background-color: #e74c3c; /* Bronze color for 3rd place */
+        }
+        .stat-label {
+            margin: 8px 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .text-below {
+            font-size: 18px;
+            color: #333;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="podium-container">
+        <div class="podium">
+            <div class="podium-group">
+                <div class="podium-label">30 Hang-up's</div>
+                <div class="second" style="--second-place: 70;">
+                    <div class="stat-label">2</div>
+                </div>
+            </div>
+            <div class="podium-group">
+                <div class="podium-label">33 Hang-up's</div>
+                <div class="first" style="--first-place: 90;">
+                    <div class="stat-label">1</div>
+                </div>
+            </div>
+            <div class="podium-group">
+                <div class="podium-label">30 Hang-up's</div>
+                <div class="third" style="--third-place: 60;">
+                    <div class="stat-label">3</div>
+                </div>
+            </div>
+        </div>
+        <div class="text-below">
+            We are actively gathering real-time data to monitor and analyze the behavior of various scammers. Our focus is on identifying which scammer is currently leading in terms of the highest number of hang-ups within this specific time frame. By tracking these interactions as they happen, we gain valuable insights into their activity patterns and can determine who is the most aggressive or persistent during this period. This continuous flow of live data allows us to keep a close watch on their tactics and adapt our approach to counteract their strategies effectively.
+        </div>
+    </div>
+</body>
+</html>

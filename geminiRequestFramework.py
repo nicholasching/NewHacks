@@ -17,6 +17,7 @@ class geminiRequestFramework:
         start = time.time()
         response = geminiRequestFramework.model.generate_content([geminiRequestFramework.myfile, "Respond to this scam as a grandma would."])
         print(f"{response.text}\n______________\nExecuted in {time.time() - start:.2f} seconds")
+        return response.text
     
     def __init__(self):
         load_dotenv() 
