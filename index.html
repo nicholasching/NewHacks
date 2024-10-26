@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </head>
 
@@ -32,20 +33,25 @@
         </div>
     
         <div class="container" id="thirdcontainer">
-            <h1 id="hthird">Here is what we came up with:</h1>
-            <p id="pthird">By utilizing AI, scam call prevention can be improved. With AI's incredible pattern recognition we can find similarities in scam calls. Whether it be script, content, voice, etc, AI can detect a correlation between scam calls allowing us to implement prevention.</p>
+            <div class="thirdtextcontainer">
+                <h1 id="hthird">Here is what we came up with:</h1>
+                <p id="pthird">By utilizing AI, scam call prevention can be improved. With AI's incredible pattern recognition we can find similarities in scam calls. Whether it be script, content, voice, etc, AI can detect a correlation between scam calls allowing us to implement prevention.</p>
+            </div>
+            <img src="images/ai.png" id="aiimg">
         </div>
 
         <div class="container" id="forthcontainer">
-            <h1 id="hforth">Lets see it in action:</h1>
             <div id="scammerinputcontainer">
                 <img src="images/scammerinput.png" id="scammerinputimg">
-                <button id="scammerinputbutton">Click Me</button>
+                <button class="mic-toggle" id="mic"><i class="fa-solid fa-microphone"></i></button>
+                <audio class="playback" controls></audio>
             </div>
-            
+            <h1 id="hforth">Yada</h1>
         </div>
+
     </div>
 
+    <script src="script.js"></script>
 
 </body>
 </html>

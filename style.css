@@ -88,38 +88,55 @@ p {
 
 #thirdcontainer {
     display: flex;
-    flex-direction: column;
+    flex-direction: ;
     justify-content: center;
     align-items: center;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 #hthird {
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 3%;
 }
 
 #pthird {
     text-align: center;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     color: grey;
     line-height: 1.6rem;
+}
+
+#aiimg {
+    margin-left: 10%;
 }
 
 #forthcontainer {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-#scammerinputimg {
-    position: absolute;
+#scammerinputcontainer {
+    position: relative;
+    display: inline-block;
 }
 
-#scammerinputbutton {
+
+#mic {
+    font-size: 3.5rem;
+    border: 0px;
     position: absolute;
-    right: 21.5%;
-    top: 100;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10rem;
+}
+
+#hforth {
+    margin-left: 10%;
 }
 
