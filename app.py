@@ -1,7 +1,9 @@
 from flask import Flask, render_template, request
+from model import model
 import os
 
 app = Flask(__name__)
+model = model()
 
 @app.route('/')
 def home():
@@ -15,10 +17,8 @@ def upload_audio():
     os.makedirs("uploads", exist_ok=True)
     audio_file.save(audio_path)
     print(audio_path)
-
-
-    # IMPLEMENT WHEN BACKEND LOGIC COMPLETE os.remove(audio_path)
-    
+    model.generateResponse(audio_path)
+    os.remove(audio_path)
     return "Audio received successfully!"
 
 if __name__ == '__main__':
