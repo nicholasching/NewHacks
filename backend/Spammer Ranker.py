@@ -4,14 +4,14 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import IsolationForest
 import joblib
 
-def analyze_phone_spam(csv_path):
+def analyze_phone_spam(phone_data.csv):
     """
     Simple function to analyze phone spam data
     """
     try:
         # Read the CSV file
         print("Loading data...")
-        df = pd.read_csv(csv_path)
+        df = pd.read_csv(backend/phone_data.csv)
         
         # Check if required columns exist
         required_columns = ['phone_number', 'hangup_count', 'spam_reports']
@@ -63,7 +63,7 @@ def analyze_phone_spam(csv_path):
 if __name__ == "__main__":
     try:
         # Replace this with your CSV file path
-        csv_path = "phone_data.csv"
+        csv_path = "backend\phone_data.csv"
         
         print(f"Analyzing data from: {csv_path}")
         results = analyze_phone_spam(csv_path)
@@ -79,3 +79,4 @@ if __name__ == "__main__":
             
     except Exception as e:
         print(f"Error in main execution: {str(e)}")
+    
