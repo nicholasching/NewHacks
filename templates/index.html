@@ -87,7 +87,8 @@
             }
 
             recorder.onstop = e => {
-                sendAudioToBackend(new Blob(chunks, { type: "audio/mp3; codecs=opus"}));
+                sendAudioToBackend(new Blob(chunks, { type: "audio/mp3; codecs=opus"}))
+
             }
 
             can_record = true;
@@ -110,15 +111,12 @@
         async function sendAudioToBackend(audioBlob) {
             const formData = new FormData();
             formData.append("audio", audioBlob, "recording.mp3");
-
+            
             // Send audio to the backend
             await fetch("/upload_audio", {
                 method: "POST",
                 body: formData
             });
-
-            const audio = new Audio("static/output.mp3");
-            audio.play()
         }
     </script>
 

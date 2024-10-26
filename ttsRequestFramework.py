@@ -29,9 +29,9 @@ class ttsRequestFramework:
         # Check for success
         if response.status_code == 200:
             # Save the audio file
-            with open("static/output.mp3", "wb") as file:
+            with open("static/audio/output.mp3", "wb") as file:
                 file.write(response.content)
-            # playsound('output.mp3')
+            playsound('static/audio/output.mp3')
             print("Audio generated successfully!")
             return True
         else:
