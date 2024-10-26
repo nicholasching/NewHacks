@@ -8,9 +8,9 @@ class geminiRequestFramework:
     model = None
     myfile = None
 
-    def uploadAudio(self):
+    def uploadAudio(self, audioPath):
         start = time.time()
-        geminiRequestFramework.myfile = genai.upload_file("sampleAudio.mp3")
+        geminiRequestFramework.myfile = genai.upload_file(audioPath)
         print(f"{geminiRequestFramework.myfile=}\n______________\nUploaded in {time.time() - start:.2f} seconds")
 
     def generateResponse(self):

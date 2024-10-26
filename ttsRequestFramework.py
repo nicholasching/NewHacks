@@ -31,11 +31,13 @@ class ttsRequestFramework:
             # Save the audio file
             with open("output.mp3", "wb") as file:
                 file.write(response.content)
-            playsound('output.mp3')
+            # playsound('output.mp3')
             print("Audio generated successfully!")
+            return True
         else:
             print("Error:", response.status_code)
             print(response.text)
+            return False
 
     def __init__(self, stability, similarityBoost):
         load_dotenv() 
