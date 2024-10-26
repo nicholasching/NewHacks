@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +25,7 @@
         </div>
     
         <div class="container" id="secondcontainer">
-            <img src="images/scamcaller.png" id="scamcallerimg">
+            <img src="static/images/scamcaller.png" id="scamcallerimg">
             <div class="secondtextcontainer">
                 <h1 id="hsecond">Customers are paying for high-quality phone plans - they shouldn't have to deal with scam calls.</h1>
                 <p id="psecond">So, what can we do?</p>
@@ -37,12 +37,12 @@
                 <h1 id="hthird">Here is what we came up with:</h1>
                 <p id="pthird">By utilizing AI, scam call prevention can be improved. With AI's incredible pattern recognition we can find similarities in scam calls. Whether it be script, content, voice, etc, AI can detect a correlation between scam calls allowing us to implement prevention.</p>
             </div>
-            <img src="images/ai.png" id="aiimg">
+            <img src="static/images/ai.png" id="aiimg">
         </div>
 
         <div class="container" id="forthcontainer">
             <div id="scammerinputcontainer">
-                <img src="images/scammerinput.png" id="scammerinputimg">
+                <img src="static/images/scammerinput.png" id="scammerinputimg">
                 <button class="mic-toggle" id="mic"><i class="fa-solid fa-microphone"></i></button>
                 <audio class="playback" controls></audio>
             </div>
