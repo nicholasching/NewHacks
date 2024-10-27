@@ -8,9 +8,6 @@ fetch('http://localhost:8080/get_data')
   .then(data => {
     console.log('Data received:', data);
             i = 0;
-           // let code_1 = console.log(data[i+1], data[i+2]);
-            //let code_2 = console.log(data[i+2], data[i+2]);
-            //let code_3 = console.log(data[i+3], data[i+3]);
             let code_1 = data[0]["hangup_count"]; // Assuming "rank" holds the number you want to display for code_1
             let code_2 = data[1]["hangup_count"];
             let code_3 = data[2]["hangup_count"];
