@@ -14,13 +14,14 @@ body {
     animation: appear linear;
     animation-timeline: view();
     animation-range: entry 0 cover 50%;
-    margin-bottom: 25%;
+    margin-bottom: 22.5%;
     padding-left: 15%;
     padding-right: 15%;
 }
 
 p {
-    font-weight: 500;
+    font-weight: 600;
+    color: rgb(170, 170, 170);
 }
 
 @keyframes appear {
@@ -106,7 +107,6 @@ p {
 
 #psecond {
     text-align: center;
-    color: grey;
     font-size: 1.5rem;
 }
 
@@ -133,11 +133,11 @@ p {
 #pthird {
     text-align: center;
     font-size: 1.5rem;
-    color: grey;
     line-height: 1.6rem;
 }
 
 #aiimg {
+    width: 150%;
     margin-left: 10%;
 }
 
@@ -152,7 +152,6 @@ p {
 #psmalltext {
     font-size: 1.5rem;
     margin-top: 1%;
-    color: grey;
 }
 
 #forthcontainer {
@@ -205,7 +204,6 @@ p {
 
 #pforth {
     font-size: 1.5rem;
-    color: grey;
     line-height: 1.6rem;
 }
 
@@ -226,6 +224,5 @@ p {
 
 #pfifth {
     font-size: 1.5rem;
-    color: grey;
     line-height: 1.6rem;
 }
