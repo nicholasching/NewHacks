@@ -1,4 +1,4 @@
-# NewHacks
+# Scam-Mah: AI that protects you from scam callers! Powered by ML, Gemini and ElevenLabs API.
 StandardScaler and IsolationForest ML algorithms power the anomalous detection model, while Google's Gemini and ElevenLabs's TTS APIs power the live response component of Scam-Mah. The backend is handled by Python and integrated with an HTML/CSS/JS frontend. 
 
 Dependencies/Libraries Used:
