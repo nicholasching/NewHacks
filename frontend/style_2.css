@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Nunito', sans-serif;
     background-color: #f0f0f0;
     display: flex;
     flex-direction: column;
@@ -8,16 +8,190 @@ body {
     height: 100vh;
     margin: 0;
 }
+
 .podium-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
 }
+
 .podium {
     display: flex;
     align-items: flex-end;
     gap: 20px;
+}
+
+.podium-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 150px;
+}
+
+.podium-label_3 {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    background: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    position: relative;
+    animation: animate 3s alternate infinite;
+}
+
+@keyframes animate{
+    from{
+        bottom: 0px;
+    }
+    to {
+        bottom: 40px;
+    }
+}
+
+.podium-label_1 {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    background: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    position: relative;
+    animation: animate 1s alternate infinite;
+}
+@keyframes animate {
+    from{
+        bottom: 0px;
+    }
+    to {
+        bottom: 60px;
+    }
+}
+
+.podium-label_2 {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    background: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    position: relative;
+    animation: animate 2s alternate infinite;
+}
+@keyframes animate {
+    from{
+        bottom: 20px;
+    }
+    to {
+        bottom: 60px;
+    }
+}
+
+
+.second {
+    height: calc(220px * var(--second-place, 0) / 100);
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 22px;
+    width: 100%;
+    position: relative;
+    animation: animate 2s alternate infinite;
+}
+@keyframes animate {
+    from{
+        bottom: 20px;
+    }
+    to {
+        bottom: 60px;
+    }
+}
+   
+.first {
+    height: calc(280px * var(--first-place, 0) / 100);
+    background-color: #f39c12; /* Gold color for 1st place */
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 22px;
+    width: 100%;
+    position: relative;
+    animation: animate 1s alternate infinite;
+}
+
+@keyframes animate {
+    from{
+        bottom: 0px;
+    }
+    to {
+        bottom: 60px;
+    }
+}
+   
+
+.third {
+    height: calc(180px * var(--third-place, 0) / 100);
+    background-color: #e74c3c; /* Bronze color for 3rd place */
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 22px;
+    width: 100%;
+    position: relative;
+    animation: animate 3s alternate infinite;
+}
+
+@keyframes animate{
+    from{
+        bottom: 0px;
+    }
+    to {
+        bottom: 40px;
+    }
+}
+
+.stat-label {
+    margin: 8px 0;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+
+}
+.text-below {
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.title{
+    font-size: 50px;
+    position: relative;
+    padding: 40px;
+    font: bold;
+    margin: 30px;
     animation: fadeIn 1.5s ease-out forwards;
 }
 @keyframes fadeIn {
@@ -30,55 +204,9 @@ body {
         opacity: 1;
     }
 }
-.podium-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    width: 150px;
+
+.title_2{
+    padding: 30px;
+    font-size: 50px;
 }
-.podium-label {
-    font-size: 18px;
-    color: #333;
-    font-weight: bold;
-    background: #f0f0f0;
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-.podium div {
-    background-color: #3498db;
-    color: white;
-    text-align: center;
-    padding-top: 15px;
-    border-radius: 5px 5px 0 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    font-size: 22px;
-    width: 100%;
-    transition: height 0.5s;
-}
-.second {
-    height: calc(220px * var(--second-place, 0) / 100);
-}
-.first {
-    height: calc(280px * var(--first-place, 0) / 100);
-    background-color: #f39c12; /* Gold color for 1st place */
-}
-.third {
-    height: calc(180px * var(--third-place, 0) / 100);
-    background-color: #e74c3c; /* Bronze color for 3rd place */
-}
-.stat-label {
-    margin: 8px 0;
-    font-size: 18px;
-    font-weight: bold;
-}
-.text-below {
-    font-size: 18px;
-    color: #333;
-    text-align: center;
-    margin-top: 20px;
-}
+
