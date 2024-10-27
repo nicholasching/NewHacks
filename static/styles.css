@@ -210,11 +210,15 @@ p {
 #fifthcontainer {
     display: flex;
     text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 17.5%;
 }
 
 #fifthtextcontainer {
     display: flex;
     flex-direction: column;
+    margin-right: 10%;
 }
 
 #hfifth {
@@ -225,4 +229,15 @@ p {
 #pfifth {
     font-size: 1.5rem;
     line-height: 1.6rem;
+}
+
+#footercontainer {
+    width: 100%;
+    margin-bottom: 1%;
+    text-align: center;
+}
+
+#hfooter {
+    color: grey;
+    font-size: 1rem;
 }
