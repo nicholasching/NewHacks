@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: red solid 1px;
+    /* border: red solid 1px; */
 }
 
 body {
@@ -14,11 +14,14 @@ body {
     animation: appear linear;
     animation-timeline: view();
     animation-range: entry 0 cover 50%;
-    margin-bottom: 25%;
+    margin-bottom: 22.5%;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 
 p {
-    font-weight: bold;
+    font-weight: 600;
+    color: rgb(170, 170, 170);
 }
 
 @keyframes appear {
@@ -41,23 +44,36 @@ p {
     }
 }
 
-#headercontainer {
-    text-align: center;
-    margin-top: 1%;
-    margin-bottom: 22.5%;
-    animation: fade 2s;
-}
-
-#hheader {
-    font-size: 1rem;
-    color: grey;
-}
+@keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    25% {
+      background-position: 100% 50%;
+    }
+    50% {
+      background-position: 0% 50%;
+    }
+    75% {
+      background-position: -100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 
 #maincontainer {
     display: flex;
     flex-direction: column;
     text-align: center;
-    animation: fade 2s
+    align-items: center;
+    animation: fade 2s;
+    margin-top: 5%;
+}
+
+#mainimg {
+    width: 75%;
+    position: relative;
 }
 
 #hmain {
@@ -72,8 +88,6 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: 10%;
-    padding-right: 10%;
 }
 
 #scamcallerimg {
@@ -88,38 +102,56 @@ p {
 #hsecond {
     text-align: center;
     margin-bottom: 5%;
-    font-size: 2rem;
+    font-size: 2.3rem;
 }
 
 #psecond {
     text-align: center;
-    color: grey;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 #thirdcontainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 10%;
-    padding-right: 10%;
 }
 
 #hthird {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 3%;
 }
 
+.gradient-text {
+    background: linear-gradient(90deg, #ff4a4a, #f8c537, #2b4eff, #ff4b4b, #ff5ab7);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 18s infinite linear;
+  }
+
 #pthird {
     text-align: center;
-    font-size: 1.1rem;
-    color: grey;
+    font-size: 1.5rem;
     line-height: 1.6rem;
 }
 
 #aiimg {
+    width: 150%;
     margin-left: 10%;
+}
+
+#smalltextcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30%;
+}
+
+#psmalltext {
+    font-size: 1.5rem;
+    margin-top: 1%;
 }
 
 #forthcontainer {
@@ -131,6 +163,7 @@ p {
 #scammerinputcontainer {
     position: relative;
     display: inline-block;
+    margin-right: 10%;
 }
 
 .mic-toggle {
@@ -145,6 +178,7 @@ p {
     background-color: #4CAF50;
     color: white;
     border: none;
+    box-shadow: 0px 0px 10px 5px rgb(204, 204, 204);
     transition: 0.3s;
     transform-origin: center;
 }
@@ -154,14 +188,41 @@ p {
 }
 
 .mic-toggle.is-recording {
-    background-color: red;
-}
-
-#hforth {
-    margin-left: 10%;
+    background-color: rgb(224, 0, 0);
 }
 
 #forthtextcontainer {
     display: flex;
     flex-direction: column;
+    text-align: center;
+}
+
+#hforth {
+    font: 2.2rem;
+    margin-bottom: 3%;
+}
+
+#pforth {
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+}
+
+#fifthcontainer {
+    display: flex;
+    text-align: center;
+}
+
+#fifthtextcontainer {
+    display: flex;
+    flex-direction: column;
+}
+
+#hfifth {
+    font: 2.2rem;
+    margin-bottom: 3%;
+}
+
+#pfifth {
+    font-size: 1.5rem;
+    line-height: 1.6rem;
 }
